@@ -1,0 +1,48 @@
+{% load static %}
+<div class="coffee_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="coffee_taital">OUR COFFEE OFFER</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="coffee_section_2">
+        <div id="main_slider" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <div class="carousel-inner">
+                {% for coffee in coffee_list %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="coffee_img">
+                                        <!-- Coffee image -->
+                                        <img src="{{ coffee.image.url }}" alt="{{ coffee.title }}" style="width:100%; height:auto;">
+                                    </div>
+                                    <div class="coffee_box">
+                                        <h3 class="types_text">{{ coffee.title }}</h3> <!-- Coffee title -->
+                                        <p>{{ coffee.description }}</p> <!-- Coffee description -->
+                                        {% if coffee.price %}
+                                            <p>Price: ${{ coffee.price }}</p> <!-- Coffee price -->
+                                        {% else %}
+                                            <p>Price: Not available</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                <i class="fa fa-arrow-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
