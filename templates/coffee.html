@@ -3,40 +3,67 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="coffee_taital">OUR COFFEE OFFER</h1>
+                <h1 class="coffee_taital">OUR Coffee OFFER</h1>
             </div>
         </div>
     </div>
-
     <div class="coffee_section_2">
-        <div id="main_slider" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div id="main_slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                {% for coffee in coffee_list %}
-                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="coffee_img">
-                                        <!-- Coffee image -->
-                                        <img src="{{ coffee.image.url }}" alt="{{ coffee.title }}" style="width:100%; height:auto;">
-                                    </div>
-                                    <div class="coffee_box">
-                                        <h3 class="types_text">{{ coffee.title }}</h3> <!-- Coffee title -->
-                                        <p>{{ coffee.description }}</p> <!-- Coffee description -->
-                                        {% if coffee.price %}
-                                            <p>Price: ${{ coffee.price }}</p> <!-- Coffee price -->
-                                        {% else %}
-                                            <p>Price: Not available</p>
-                                        {% endif %}
-                                    </div>
+                <div class="carousel-item active">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="coffee_img">
+                                    <img src="{% static 'images/img-1.png' %}" alt="Coffee Image 1">
+                                </div>
+                                <div class="coffee_box">
+                                    <h3 class="types_text">TYPES OF COFFEE</h3>
+                                    <p class="looking_text">Looking at its layout. The point of</p>
+                                    <div class="read_bt"><a href="#">Read More</a></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="coffee_img">
+                                    <img src="{% static 'images/img-2.png' %}" alt="Coffee Image 2">
+                                </div>
+                                <div class="coffee_box">
+                                    <h3 class="types_text">BEAN VARIETIES</h3>
+                                    <p class="looking_text">Looking at its layout. The point of</p>
+                                    <div class="read_bt"><a href="#">Read More</a></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="coffee_img">
+                                    <img src="{% static 'images/img-3.png' %}" alt="Coffee Image 3">
+                                </div>
+                                <div class="coffee_box">
+                                    <h3 class="types_text">COFFEE & PASTRY</h3>
+                                    <p class="looking_text">Looking at its layout. The point of</p>
+                                    <div class="read_bt"><a href="#">Read More</a></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="coffee_img">
+                                    <img src="{% static 'images/img-4.png' %}" alt="Coffee Image 4">
+                                </div>
+                                <div class="coffee_box">
+                                    <h3 class="types_text">COFFEE TO GO</h3>
+                                    <p class="looking_text">Looking at its layout. The point of</p>
+                                    <div class="read_bt"><a href="#">Read More</a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                {% endfor %}
+                </div>
+                <!-- Repeat similar structure for other carousel items -->
+                <div class="carousel-item">
+                    <!-- Add content for second slide -->
+                </div>
+                <div class="carousel-item">
+                    <!-- Add content for third slide -->
+                </div>
             </div>
-
-            <!-- Carousel Controls -->
             <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
                 <i class="fa fa-arrow-left"></i>
             </a>

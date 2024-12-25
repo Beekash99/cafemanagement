@@ -6,6 +6,10 @@
       {% include "head.html" %}
       {% endblock head %}
 
+      {% block banner %}
+      {% include "banner.html" %}
+      {% endblock banner %}
+
       {% block coffee %}
       {% include 'coffee.html'%}
       {% endblock coffee%}
@@ -13,14 +17,12 @@
       {% block blog %}
       {% include "blog.html" %}
       {% endblock blog %}
-     
+
       {% block about %}
       {% include "aboutus.html" %}
       {% endblock about %}
       
-      {% block contact %}
-      {% include "contact.html" %}
-      {% endblock contact %}
+      
       
       {% block footer %}
       {% include "footer.html" %}

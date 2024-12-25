@@ -20,14 +20,19 @@
                  </li>
                  <li>
                     <a href="#">
-                    <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Coffedelight@gmail.com</span>
+                    <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Coffeedelight@gmail.com</span>
                     </a>
                  </li>
               </ul>
            </div>
            <div class="form-group">
-              <textarea class="update_mail" placeholder="Your Email" rows="5" id="comment" name="Your Email"></textarea>
-              <div class="subscribe_bt"><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+            <form method="post" action="" class="email" style="display: flex; align-items: center;justify-content: center; gap: 10px; margin: 10px 0;">
+               {% csrf_token %}
+               <input type="email" class="update_email" placeholder="Your email" id="email" name="email_required" style="padding: 30px; border: 1px solid #ccc; align-items: center; border-radius: 5px; flex: 1;"/>
+               <button type="submit" class="subscribe_button" style="background-color: #007BFF; color: white; border: none; border-radius: 5px; padding: 10px 15px; cursor: pointer;">
+                   <i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 16px;"></i>
+               </button>
+            </form>
            </div>
         </div>
      </div>
@@ -37,8 +42,8 @@
   <div class="container">
      <div class="row">
         <div class="col-sm-12">
-           <p class="copyright_text">2024 All Rights Reserved @ <span>Coffe Delight </span>
-          </p>
+           <p class="copyright_text">2024 All Rights Reserved @ <span>Coffee Delight</span>
+           </p>
         </div>
      </div>
   </div>
